@@ -270,9 +270,9 @@ class ContactPlugin(b3.plugin.Plugin):
                 email['Subject']=sujetmail 
                 server = smtplib.SMTP('smtp.gmail.com',587)
                 server.set_debuglevel(1)
-                server.ehlo(gmailusername)
+                #server.ehlo(gmailusername)
                 server.starttls()
-                server.ehlo()
+                #server.ehlo()
                 server.login(gmailusername, gmailpwd)
                 server.sendmail(mfrom, mto, email.as_string())
                 server.quit()
